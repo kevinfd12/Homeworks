@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>repl.it</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="clock">0:00:00</div>
+  <script>
+    setInterval(showTime, 1000); //This line makes it so that the function is ran each millisecond. 
+        function showTime() {
+            let time = new Date(); //Full Date output looks like Sat Dec 03 2022 03:39:57 GMT-0500 (Eastern Standard Time)
+            let hour = time.getHours(); //Simply retreiving hours
+            let min = time.getMinutes(); //Simply retreiving minutes
+            let sec = time.getSeconds(); //Simply retreiving seconds
+            am_pm = "AM"; //This is setting a variable to be switched later on. 
+ 
+            if (hour > 12) {
+                hour -= 12;
+                am_pm = "PM";
+            } //This is so that the time appear from 1 - 12 in terms of hours instead of 1 - 24. Especially since we are working with AM and PM it wouldnt make sense.
+            if (hour == 0) {
+                hr = 12;
+                am_pm = "AM";
+            } // There is no such thing as 00:00:00 AM or PM
+ 
+            hour = hour < 10 ? "0" + hour : hour; // If Hour is less than 10, then the value of hour is 0 + hour (this is concatenating the string) otherwise it will be just the hour. So 10, 11, 12 does not need to be concatenated. 
+            min = min < 10 ? "0" + min : min; // same logic
+            sec = sec < 10 ? "0" + sec : sec; // same logic
+ 
+            let currentTime = hour + ":" 
+                + min + ":" + sec + am_pm; // Just concatenating the strings together. 
+ 
+            document.getElementById("clock")
+                .innerHTML = currentTime; //This is just replacing the text in clock with the concatenated variable created above. 
+        }
+ 
+        showTime()
+
+    let array = 'dog'
+
+function dogArr(Arr) 
+{
+  var result = [];
+  for (var m = 0; m < Arr.length; m++) 
+  { console.log("m =" + m)
+    for (var n = m+1; n<Arr.length+1; n++) 
+    { console.log("n =" + n)
+      result.push(Arr.slice(m,n));
+    }
+  }
+  return result;
+};
+
+console.log(dogArr(array));
+ 
+  </script>
+  <div id="error"></div>
+  <form id="form">
+    <div>
+      <label for="name" class="form-label">Choose a username:</label>
+      <input name="name" class="form-input" type="text" id="name"/>
+      <script>
+        const formName = document.getElementById('name');
+        const form = document.getElementById('form')
+        const submitBtn = document.getElementById('btnForm');
+        const restrictions = /^[-a-zA-Z0-9]+$/
+
+        function formValidator() {
+          if (formName.value.length <= 3 || formName.value.length >= 21 ){
+           throw 0
+          }
+          else if (!formName.value.match(restrictions)) {
+            throw 0
+          }
+        }
+
+        form.addEventListener('input', () =>  {
+          try {
+            formValidator()
+          } catch(err) {
+            alert('Your input is invalid. Usernames must contain at least 4 characters and 20 at maximum and can only contains letters, digits and hyphens')
+          }
+  });
+
+  form.addEventListener('submit', (e) =>  {
+          try {
+            formValidator()
+          } catch(err) {
+            alert('You tried submitting although the input is still invalid')
+            e.preventDefault()
+          }
+  });
+      </script>
+    </div>
+    <button id='btnForm' class="btn">Submit</button>
+  </form>
+</body>
+
+</html>
