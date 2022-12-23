@@ -5,3 +5,6 @@
 // "Red,Green,White,Black"
 // "Red,Green,White,Black"
 // "Red+Green+White+Black"
+
+myColor = ['Red', 'Green', 'White', 'Black'];
+console.log(myColor.join(','));

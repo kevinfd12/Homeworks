@@ -3,3 +3,13 @@
 // Test Data :
 // console.log(truncate_string("Robin Singh",4));
 // "Robi"
+
+function truncate_string(str, num) {
+  if (str.length > num) {
+    return str.slice(0, num);
+  } else {
+    return str;
+  }
+}
+
+console.log(truncate_string('Robin Singh', 4));
