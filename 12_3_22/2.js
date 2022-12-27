@@ -17,3 +17,8 @@ function string_to_array(input) {
 console.log(string_to_array('Robin Singh'));
 console.log(string_to_array(true));
 console.log(string_to_array(56));
+
+// COMMENT --------------
+// good job :) it's nice of you to check if input is an actual string
+// future reference: for short operations like this no need to create additional variables, so you can return whole logic f.ie: return input.split(' ')
+// by the way, you don't need this variable text, so instead of text you can use input

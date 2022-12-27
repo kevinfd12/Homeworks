@@ -13,3 +13,9 @@ function truncate_string(str, num) {
 }
 
 console.log(truncate_string('Robin Singh', 4));
+
+// COMMENT --------------
+// good job :)
+// future reference: for if ... else conditions try to use ternary operator, f.ie.:
+const truncate_string2 = (str, num) => (str.length > num ? str.slice(0, num) : str);
+console.log(truncate_string2('Robin Singh', 4));

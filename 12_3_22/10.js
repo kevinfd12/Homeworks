@@ -24,3 +24,17 @@ function insertDashes(num) {
 
 const result = insertDashes(025466);
 console.log(result);
+
+// COMMENT --------------
+// this one was a tricky one, so really good job :) | remind me please, to talk about this example
+// below my solution:
+
+const strFromNum = (n) =>
+  [...`${n}`].reduce((acc, cur) => {
+    const prevVal = parseInt(acc[acc.length - 1]);
+    const curVal = parseInt(cur);
+    prevVal % 2 === 0 && curVal % 2 === 0 ? (acc += `-${cur}`) : (acc += cur);
+    return acc;
+  });
+
+console.log(strFromNum(025466));

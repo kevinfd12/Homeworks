@@ -21,3 +21,11 @@ function diff_days(dt1, dt2) {
 }
 
 console.log(diff_days(dt1, dt2));
+
+// COMMENT --------------
+// good job, however... what with case where dt1 is later than dt2 ?
+dt3 = new Date('October 22, 2014 11:13:00');
+dt4 = new Date('October 11, 2014 08:11:00');
+console.log(diff_days(dt3, dt4));
+// Result is a negative number. It would be nicer if result will be always as a natural number
+// try to work work more about this one. Do not create separate function for second case. Try to create one utility function to handle both cases.

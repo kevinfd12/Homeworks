@@ -13,3 +13,7 @@ function array_Clone(array) {
 
 console.log(array_Clone([1, 2, 4, 0]));
 console.log(array_Clone([1, 2, [4, 0]]));
+
+// COMMENT --------------
+// good job :)
+// future reference: let/const instead of var :p

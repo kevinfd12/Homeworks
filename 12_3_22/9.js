@@ -8,3 +8,6 @@
 
 myColor = ['Red', 'Green', 'White', 'Black'];
 console.log(myColor.join(','));
+
+// COMMENT --------------
+// well, this one you need work more. First, it could be nice to have it as a function. Second, case from 7th line is not handled.
