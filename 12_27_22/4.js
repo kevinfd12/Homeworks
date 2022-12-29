@@ -13,3 +13,28 @@
 // true
 // false
 // false
+
+function is_Natural(num) {
+  if (parseInt(num, 10) > 0 && parseInt(num, 10) / num === 1) {
+    return true;
+  } else return false;
+}
+
+console.log(is_Natural(-15));
+console.log(is_Natural(1));
+console.log(is_Natural(10.22));
+console.log(is_Natural(10 / 0));
+
+// function is_Natural(num) {
+//   if (typeof num !== 'number') {
+//     return false;
+//   }
+//   if (num <= 0) {
+//     return false;
+//   }
+//   if (num / Math.floor(num) === 1) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
