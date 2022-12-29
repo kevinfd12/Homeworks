@@ -5,3 +5,11 @@
 // console.log(min([-12,-34,0,-56,-1]));
 // 1
 // -56
+
+function min(array) {
+  minimum = Math.min(...array);
+  return minimum;
+}
+
+console.log(min([12, 34, 56, 1]));
+console.log(min([-12, -34, 0, -56, -1]));
