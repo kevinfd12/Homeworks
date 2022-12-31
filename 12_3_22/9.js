@@ -11,3 +11,13 @@ console.log(myColor.join(','));
 
 // COMMENT --------------
 // well, this one you need work more. First, it could be nice to have it as a function. Second, case from 7th line is not handled.
+
+function elementJoin(arr) {
+  let commaJoin = arr.join(',');
+  let additionJoin = arr.join('+');
+  return `${commaJoin}
+    ${additionJoin}`;
+}
+
+myColor = ['Red', 'Green', 'White', 'Black'];
+console.log(elementJoin(myColor));

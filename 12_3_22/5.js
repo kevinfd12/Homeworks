@@ -24,6 +24,6 @@ const protect_email2 = (email) => {
   for (; i < 5; i++) {
     if (email[i] === '@') break;
   }
-  return `${email.slice(0, i)}...${email.slice(email.indexOf('@'))}`;
+  return `${email.slice(0, i)}...${email.slice(email.indexOf('@'))}`; // <--- how does ${email.slice(email.indexOf('@'))}` get you the @gmail.com?
 };
 console.log(protect_email2('robin_singh@example.com'));

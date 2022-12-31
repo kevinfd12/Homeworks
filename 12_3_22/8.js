@@ -7,7 +7,7 @@
 // [1, 2, [4, 0]]
 
 function array_Clone(array) {
-  var clone = [...array];
+  let clone = [...array];
   return clone;
 }
 
