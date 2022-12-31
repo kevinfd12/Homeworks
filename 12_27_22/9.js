@@ -14,9 +14,6 @@ const student = {
   rollno: 12,
 };
 
-function objLength(object1) {
-  let length = Object.keys(student).length;
-  return length;
-}
+const objLength = (object1) => Object.keys(object1).length;
 
 console.log(objLength(student));

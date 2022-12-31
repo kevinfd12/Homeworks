@@ -4,7 +4,7 @@
  */
 
 // Have to review this again
-var isValid = function (s) {
+const isValid = function (s) {
   let bracket = {
     '(': ')',
     '[': ']',
@@ -17,9 +17,21 @@ var isValid = function (s) {
     if (bracket[char]) {
       heap.push(bracket[char]);
     } else {
+      console.log(heap[heap.length - 1], char);
       if (heap.pop() !== char) return false;
     }
   }
 
   return !heap.length;
 };
+
+console.log(`-------------------------`);
+console.log(isValid('()'));
+console.log(`-------------------------`);
+console.log(isValid('()[]{}'));
+console.log(`-------------------------`);
+console.log(isValid('(]'));
+console.log(`-------------------------`);
+console.log(isValid('({[]})'));
+console.log(`-------------------------`);
+console.log(isValid('({[]}))'));

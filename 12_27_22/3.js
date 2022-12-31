@@ -12,3 +12,8 @@ function bin_to_dec(num) {
 
 console.log(bin_to_dec('110011'));
 console.log(bin_to_dec('100'));
+
+const bin_to_dec2 = (num) => parseInt(num, 2);
+
+console.log(bin_to_dec2('110011'));
+console.log(bin_to_dec2('100'));

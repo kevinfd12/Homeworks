@@ -16,6 +16,12 @@ console.log(twointSum(25, 50));
 console.log(twointSum(-45, -50));
 console.log(twointSum(50, 50));
 
+const twointSum2 = (a, b) => (a > b ? a : b);
+
+console.log(twointSum2(25, 50));
+console.log(twointSum2(-45, -50));
+console.log(twointSum2(50, 50));
+
 // function twointSum(num1, num2) {
 //   if (typeof num1 !== 'number' || typeof num2 !== 'number') {
 //     return console.log('this is not two ints');

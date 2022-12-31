@@ -10,7 +10,7 @@
  * @return {ListNode}
  */
 
-var reverseList = function (head) {
+const reverseList = function (head) {
   let cur = head;
   let prev = null;
   while (cur) {

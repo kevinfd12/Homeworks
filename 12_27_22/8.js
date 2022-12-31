@@ -13,5 +13,5 @@ const student = {
   rollno: 12,
 };
 
-let keys = Object.keys(student);
+let keys = Object.keys(student).toString();
 console.log(keys);

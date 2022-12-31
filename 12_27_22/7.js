@@ -25,3 +25,10 @@ function diff_to_GMT(date1) {
 dtGMT = new Date(); // This time is already in GMT
 
 console.log(diff_to_GMT(dtGMT));
+
+const diff_to_GMT2 = (date) => {
+  const offset = date.getTimezoneOffset() / 60;
+  console.log(offset);
+};
+
+console.log(diff_to_GMT2(new Date()));

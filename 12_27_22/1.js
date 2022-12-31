@@ -16,3 +16,9 @@ function decimals(n, m) {
 console.log(decimals(2.100212, 2));
 console.log(decimals(2.100212, 3));
 console.log(decimals(2100, 2));
+
+const decimals2 = (n, m) => n.toFixed(m);
+
+console.log(decimals2(2.100212, 2));
+console.log(decimals2(2.100212, 3));
+console.log(decimals2(2100, 2));

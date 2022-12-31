@@ -21,3 +21,8 @@ function elementJoin(arr) {
 
 myColor = ['Red', 'Green', 'White', 'Black'];
 console.log(elementJoin(myColor));
+
+const joinExample = (arr, symbol = ',') => arr.join(symbol);
+
+console.log(joinExample(myColor));
+console.log(joinExample(myColor, '+'));

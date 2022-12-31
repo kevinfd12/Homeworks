@@ -28,7 +28,6 @@ console.log(result);
 // COMMENT --------------
 // this one was a tricky one, so really good job :) | remind me please, to talk about this example
 // below my solution:
-
 const strFromNum = (n) =>
   [...`${n}`].reduce((acc, cur) => {
     const prevVal = parseInt(acc[acc.length - 1]);
@@ -38,3 +37,4 @@ const strFromNum = (n) =>
   });
 
 console.log(strFromNum(025466));
+console.log(strFromNum(25466));
