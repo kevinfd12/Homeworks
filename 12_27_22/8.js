@@ -6,3 +6,12 @@
 // sclass : "VI",
 // rollno : 12 };
 // Sample Output: name,sclass,rollno
+
+const student = {
+  name: 'David Rayy',
+  sclass: 'VI',
+  rollno: 12,
+};
+
+let keys = Object.keys(student);
+console.log(keys);
