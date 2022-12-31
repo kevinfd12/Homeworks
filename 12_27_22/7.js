@@ -6,7 +6,8 @@
 // "-1.00" --> (this is result for my location - yours will be different)
 
 function toHours(ms) {
-  let hours = (ms / (1000 * 60 * 60)).toFixed(1);
+  let milliseconds_per_hour = 3600000;
+  let hours = (ms / milliseconds_per_hour).toFixed(1);
   return hours;
 }
 
