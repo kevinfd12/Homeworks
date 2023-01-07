@@ -7,3 +7,16 @@
 // Output: false
 // console.log(compareObjs({ hair: 'long', beard: true }, { age: 26, hair: 'long', beard: true }));
 // Output: false
+
+function compareObjs(obj1, obj2) {
+  for (const key in obj2) {
+    if (obj1[key] !== obj2[key]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(compareObjs({ age: 25, hair: 'long', beard: true }, { hair: 'long', beard: true })); // Output: true
+console.log(compareObjs({ hair: 'long', beard: true }, { age: 25, hair: 'long', beard: true })); // Output: false
+console.log(compareObjs({ hair: 'long', beard: true }, { age: 26, hair: 'long', beard: true })); // Output: false

@@ -8,3 +8,11 @@
 // "3rd choice is Red."
 // - - - - - - - - - - - - -
 // Note : Use ordinal numbers to tell their position.
+
+const colors = ['Blue ', 'Green', 'Red', 'Orange', 'Violet', 'Indigo', 'Yellow '];
+const ordinals = ['th', 'st', 'nd', 'rd'];
+
+for (let i = 0; i < colors.length; i++) {
+  let ordinal = ordinals[i] || 'th';
+  console.log(`${i + 1}${ordinal} choice is ${colors[i]}.`);
+}
