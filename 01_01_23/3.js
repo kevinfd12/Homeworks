@@ -4,13 +4,16 @@
 let count = 0;
 
 for (let i = 1; i < 1000; i++) {
-  switch (true) {
-    case i % 3 === 0:
-      count += i;
-      break;
-    case i % 5 === 0:
-      count += i;
-      break;
+  // switch (true) {
+  //   case i % 3 === 0:
+  //     count += i;
+  //     break;
+  //   case i % 5 === 0:
+  //     count += i;
+  //     break;
+  // }
+  if (i % 3 === 0 || i % 5 === 0) {
+    count += i;
   }
 }
 

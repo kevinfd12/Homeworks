@@ -16,5 +16,10 @@ function findDuplicates(arr) {
   return duplicates_set;
 }
 
+const findDuplicates2 = (arr) => [
+  ...new Set(arr.filter((item) => arr.indexof(item) !== arr.lastIndexOf(item))),
+];
+
 console.log(findDuplicates(arr));
 console.log(Array.from(findDuplicates(arr))); // if we want an array as the answer
+console.log([...findDuplicates(arr)]); // if we want an array as the answer

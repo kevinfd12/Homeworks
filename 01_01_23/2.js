@@ -5,14 +5,14 @@
 
 for (let i = 1; i < 100; i++) {
   switch (true) {
+    case i % 5 === 0 && i % 3 === 0:
+      console.log('FizzBuzz');
+      break;
     case i % 3 === 0:
-      console.log(i + 'Fizz');
+      console.log('Fizz');
       break;
     case i % 5 === 0:
-      console.log(i + 'Buzzz');
-      break;
-    case i % 5 === 0 && i % 3 === 0:
-      console.log(i + 'FizzBuzz');
+      console.log('Buzzz');
       break;
     default:
       console.log(i);

@@ -11,6 +11,20 @@ const students = [
 // Input: findAverageGrade(students);
 // Output: Average grade: 81.6 (B)
 
+const bestGrade = (arr) => arr.sort((a, b) => b[1] - a[1])[0][1];
+
+// const bestGrade = (arr) => {
+//   let stepArr = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     stepArr.push(arr[i][1]);
+//   }
+
+//   return Math.max(...stepArr);
+// };
+
+console.log('best grade is: ', bestGrade(students));
+
 function findAverageGrade(students) {
   let count = 0;
   for (let i = 0; i < students.length; i++) {

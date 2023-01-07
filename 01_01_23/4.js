@@ -8,10 +8,8 @@ function swapCase(str) {
     let char = str[i];
     if (char === char.toUpperCase()) {
       result += char.toLowerCase();
-    } else if (char === char.toLowerCase()) {
-      result += char.toUpperCase();
     } else {
-      console.log(char);
+      result += char.toUpperCase();
     }
   }
   return result;

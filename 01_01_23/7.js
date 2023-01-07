@@ -18,7 +18,7 @@ function sumArrays(array1, array2) {
   const result = [];
 
   for (let i = 0; i < array1.length; i++) {
-    result.push(array1[i] + array2[i]);
+    result.push((array1[i] ?? 0) + (array2[i] ?? 0));
   }
 
   return result;
