@@ -7,7 +7,7 @@
 // output: 30
 
 console.log(getMinMax([1, 3, 2]));
-console.log(getMinMax([10, 30, 20], (a, b) => b - a));
+console.log(getMinMax([10, 30, 20], (a, b) => b - a)); //this gets you max
 console.log(
   getMinMax(
     [
@@ -18,3 +18,12 @@ console.log(
     (a, b) => a.age - b.age
   )
 );
+
+function getMinMax(arr, compareFn) {
+  if (arr.length == 0) {
+    return undefined;
+  }
+  compareFn = compareFn || ((a, b) => a - b); //gets you min
+  let min = arr.reduce((a, b) => (compareFn(a, b) < 0 ? a : b)); //If this is negative return a otherwise return b
+  return min;
+}

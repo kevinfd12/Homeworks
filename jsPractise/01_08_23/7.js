@@ -7,3 +7,8 @@
 // ]
 
 console.log(keyValuePairs({ red: '#FF0000', green: '#00FF00', white: '#FFFFFF' }));
+
+function keyValuePairs(obj) {
+  return Object.entries(obj);
+}
+// We talked about this in a call, this object.entries which returns an array of the object.

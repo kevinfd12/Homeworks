@@ -5,3 +5,7 @@
 
 console.log(hasKey({ red: '#FF0000', green: '#00FF00', white: '#FFFFFF' }, 'green'));
 console.log(hasKey({ red: '#FF0000', green: '#00FF00', white: '#FFFFFF' }, 'greeen'));
+
+function hasKey(obj, key) {
+  return obj.hasOwnProperty(key);
+}

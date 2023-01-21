@@ -12,3 +12,5 @@ console.log(splitArray([1, 2], [true, true]));
 console.log(splitArray([1, 2, 3, 4], [false, false, false, false]));
 console.log(splitArray([1, 2, 3], [true, true, true, true]));
 console.log(splitArray([1, 2, 3, 4], [false, false, false]));
+
+// i am  not sure where to start

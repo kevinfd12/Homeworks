@@ -9,3 +9,12 @@ console.log(removeFromRight([1, 2, 3]));
 console.log(removeFromRight([1, 2, 3], -1));
 console.log(removeFromRight([1, 2, 3], -2));
 console.log(removeFromRight([1, 2, 3], -4));
+
+function removeFromRight(arr, n = 1) {
+  arr = arr.reverse();
+  arr = arr.slice(0, Math.abs(n));
+  arr = arr.reverse();
+  return arr;
+}
+
+//Not sure if this is what we want.
