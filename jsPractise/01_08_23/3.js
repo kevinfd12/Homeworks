@@ -9,6 +9,7 @@ let arr2 = [1, 2, 3, 4, 5, 6, 7];
 console.log(extractValues(arr1, [1, 3]));
 console.log(extractValues(arr2, [4]));
 console.log(extractValues(arr2, [7]));
+console.log(extractValues(arr2, []));
 
 function extractValues(array1, indexes) {
   return indexes.map((i) => array1[i]);

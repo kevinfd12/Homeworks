@@ -17,4 +17,13 @@ function removeFromRight(arr, n = 1) {
   return arr;
 }
 
+const removeFromRight2 = (arr, n = -1) => {
+  return n < 0 ? arr.slice(n) : arr.slice(-n);
+};
+
+console.log(removeFromRight2([1, 2, 3]));
+console.log(removeFromRight2([1, 2, 3], -1));
+console.log(removeFromRight2([1, 2, 3], -2));
+console.log(removeFromRight2([1, 2, 3], -4));
+
 //Not sure if this is what we want.

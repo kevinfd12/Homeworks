@@ -24,6 +24,8 @@ function getMinMax(arr, compareFn) {
     return undefined;
   }
   compareFn = compareFn || ((a, b) => a - b); //gets you min
-  let min = arr.reduce((a, b) => (compareFn(a, b) < 0 ? a : b)); //If this is negative return a otherwise return b
-  return min;
+  const result = arr.reduce((a, b) => (compareFn(a, b) < 0 ? a : b)); //If this is negative return a otherwise return b
+  // alternative solution
+  const result2 = arr.sort(compareFn)[0];
+  return result;
 }

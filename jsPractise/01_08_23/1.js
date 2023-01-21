@@ -10,11 +10,21 @@ console.log(digitize(1230));
 
 function digitize(num) {
   let arr = [];
+
   for (i = 0; i < num.toString().length; i++) {
     arr.push(parseInt(num.toString().charAt(i)));
   }
+  // --------------
+  // for (i = 0; i < `${num}`.length; i++) {
+  //   arr.push(+`${num}`[i]);
+  // }
   return arr;
 }
+
+const digitize2 = (num) => [...`${num}`].map((char) => +char);
+
+console.log(digitize2(123));
+console.log(digitize2(1230));
 
 //num.toString() : This converts the number num to a string.
 //charAt() : xcharacter at the ith index

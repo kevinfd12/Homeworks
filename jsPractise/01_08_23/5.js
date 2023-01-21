@@ -7,10 +7,21 @@
 // input: splitArray([1, 2], [true, true])
 // output: [ [ 1, 2 ], [] ]
 
+const splitArray = (arr, configArr) => {
+  if (arr.length !== configArr.length) return false;
+
+  return arr.reduce(
+    (acc, curValue, curIndex) => {
+      const index = configArr[curIndex] ? 0 : 1;
+      acc[index].push(curValue);
+      return acc;
+    },
+    [[], []]
+  );
+};
+
 console.log(splitArray([1, 2], [false, true]));
 console.log(splitArray([1, 2], [true, true]));
 console.log(splitArray([1, 2, 3, 4], [false, false, false, false]));
 console.log(splitArray([1, 2, 3], [true, true, true, true]));
 console.log(splitArray([1, 2, 3, 4], [false, false, false]));
-
-// i am  not sure where to start

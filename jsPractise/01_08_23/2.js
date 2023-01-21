@@ -11,6 +11,5 @@ console.log(filteredArray(arr1, 'a', 'c'));
 console.log(filteredArray(arr2, 'b'));
 
 function filteredArray(array, char1, char2) {
-  array = array.filter((char) => char !== char1 && char !== char2);
-  return array;
+  return array.filter((char) => char !== char1 && char !== char2);
 }
