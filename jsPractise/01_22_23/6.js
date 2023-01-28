@@ -13,7 +13,12 @@ function getRandomNumber(min, max) {
 function getArrayWithRandomInts(min, max, n) {
   let arr = [];
   for (i = 0; i < n; i++) {
-    arr.push(getRandomNumber(min, max));
+    arr.push(Math.round(getRandomNumber(min, max)));
   }
+
+  // while(n > 0) {
+  //   arr.push(Math.round(getRandomNumber(min, max)));
+  //   n--
+  // }
   return arr;
 }

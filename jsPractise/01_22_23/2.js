@@ -13,8 +13,16 @@ function createArray(array1, array2) {
   for (i = 0; i < array1.length; i++) {
     for (j = 0; j < array2.length; j++) {
       result = [array1[i], array2[j]];
-      array = array.concat(result);
+      array = [...array, result];
     }
   }
   return array;
 }
+
+const createArray2 = (array1, array2) =>
+  array1.reduce((acc, cur) => [...acc, ...array2.map((value) => [cur, value])], []);
+
+console.log('--------------------------------');
+console.log(createArray2([1, 2], ['a', 'b']));
+console.log(createArray2([1, 2], [1, 2]));
+console.log(createArray2(['a', 'b'], ['a', 'b']));

@@ -9,6 +9,8 @@
 // -97
 // 6
 
+// const sum = (arr) => arr.reduce((acc, cur) => (typeof cur === 'number' ? acc + cur : acc), 0);
+
 console.log(sum([1, 2, 3]));
 console.log(sum([100, -200, 3]));
 console.log(sum([1, 2, 'a', 3]));
