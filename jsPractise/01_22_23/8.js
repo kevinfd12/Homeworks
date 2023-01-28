@@ -5,3 +5,9 @@ console.log(omit({ a: 1, b: '2', c: 3 }, ['b']));
 // output: { a: 1, c: 3 }
 console.log(omit({ a: 1, b: 2, c: 3 }, ['c']));
 // output: { a: 1, b: 2 }
+
+function omit(obj, keys) {
+  let newObj = { ...obj };
+  keys.forEach((key) => delete newObj[key]);
+  return newObj;
+}

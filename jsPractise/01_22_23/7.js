@@ -7,3 +7,13 @@ console.log(padString(String(42), 6, '0'));
 // output: '004200'
 console.log(padString('snow', 3));
 // output: 'snow'
+
+function padString(str, num, char = '') {
+  if (str.length >= num) {
+    return str;
+  }
+  totStr = num - str.length;
+  leftSide = Math.floor(totStr / 2);
+  rightSide = totStr - leftSide;
+  return char.repeat(leftSide) + str + char.repeat(rightSide);
+}

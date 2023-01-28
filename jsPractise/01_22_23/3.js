@@ -7,3 +7,7 @@ console.log(filterArray([2, 1, 2, 3], 1, 2));
 // output: [ 3 ]
 console.log(filterArray([2, 1, 2, 3], 1, 2, 3));
 // output: []
+
+function filterArray(arr, ...valuesToFilter) {
+  return arr.filter((element) => !valuesToFilter.includes(element));
+}

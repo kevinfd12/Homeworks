@@ -9,3 +9,7 @@ console.log(getRandomNumber(-5, -2));
 // possible output: -2.723927771924844
 console.log(getRandomNumber(0, 1));
 // possible output: 0.3597861703061993
+
+function getRandomNumber(min, max) {
+  return Math.random() * (max - min) + min;
+}

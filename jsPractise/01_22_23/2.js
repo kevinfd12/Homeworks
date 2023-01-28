@@ -7,3 +7,14 @@ console.log(createArray([1, 2], [1, 2]));
 // output: [ [ 1, 1 ], [ 1, 2 ], [ 2, 1 ], [ 2, 2 ] ]
 console.log(createArray(['a', 'b'], ['a', 'b']));
 // output: [ [ 'a', 'a' ], [ 'a', 'b' ], [ 'b', 'a' ], [ 'b', 'b' ] ]
+
+function createArray(array1, array2) {
+  let array = [];
+  for (i = 0; i < array1.length; i++) {
+    for (j = 0; j < array2.length; j++) {
+      result = [array1[i], array2[j]];
+      array = array.concat(result);
+    }
+  }
+  return array;
+}
