@@ -8,3 +8,17 @@
 console.log(hours_without_zeroes(new Date())); // output: 11
 console.log(minutes_with_leading_zeros(new Date())); // output: 02
 console.log(seconds_with_leading_zeros(new Date())); // output: 55
+
+function hours_without_zeroes(date) {
+  return date.getHours();
+}
+
+function minutes_with_leading_zeros(date) {
+  let minutes = date.getMinutes();
+  return minutes < 10 ? '0' + minutes : minutes;
+}
+
+function seconds_with_leading_zeros(date) {
+  let seconds = date.getSeconds();
+  return seconds < 10 ? '0' + seconds : seconds;
+}

@@ -8,3 +8,11 @@ console.log(buildArray(8, 3));
 // output: [ 3, 4, 5, 6, 7 ]
 console.log(buildArray(6, 0, 2));
 // output: [ 0, 2, 4 ]
+
+function buildArray(end, start = 0, step = 1) {
+  arr = [];
+  for (let i = start; i <= end; i += step) {
+    arr.push(i);
+  }
+  return arr;
+}

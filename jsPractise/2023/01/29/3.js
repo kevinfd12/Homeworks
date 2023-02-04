@@ -11,3 +11,21 @@ console.log(convertToTime(25)); // output: 1am
 console.log(convertToTime(36)); // output: 12pm
 console.log(convertToTime(48)); // output: 12am
 console.log(convertToTime(60)); // output: 12pm
+
+function convertToTime(num) {
+  let hour = num % 24;
+  let suffix = '';
+  if (hour === 0) {
+    hour = 12;
+    suffix = 'am';
+  } else if (hour < 12) {
+    suffix = 'am';
+  } else {
+    hour = hour % 12;
+    if (hour === 0) {
+      hour = 12;
+    }
+    suffix = 'pm';
+  }
+  return hour + suffix;
+}

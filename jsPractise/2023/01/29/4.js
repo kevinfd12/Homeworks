@@ -4,3 +4,5 @@
 
 console.log(initArray(2, 2, 0)); // output: [ [ 0, 0 ], [ 0, 0 ] ]
 console.log(initArray(2, 3, 1)); // output: [ [ 1, 1 ], [ 1, 1 ], [ 1, 1 ] ]
+
+function initArray(lengthOfInitArray, numberOfNestedArrays, contentOfNestedArray) {}
