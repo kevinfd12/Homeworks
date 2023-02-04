@@ -27,4 +27,10 @@ console.log(
 
 function objsFromPairs(arr1) {
   return arr1.reduce((acc, cur) => Object.assign(acc, { [cur[0]]: cur[1] }), {}); // why did I need to add the extra array on [cur[1]]?
+
+  // different syntax example
+  // return  arr1.reduce((acc, cur) => {
+  //   acc[cur[0]] = cur[1]
+  //   return acc
+  // }, {})
 }
