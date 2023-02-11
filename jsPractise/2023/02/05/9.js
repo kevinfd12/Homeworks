@@ -7,3 +7,7 @@ console.log(roundIt(1.0)); // output: 1
 console.log(roundIt(-4.55555)); // output: -4.5556
 console.log(roundIt(5.00001)); // output: 5
 console.log(roundIt(1.123456789)); // output: 1.1235
+
+function roundIt(num) {
+  return +num.toFixed(4).replace(/\.?0+$/, '');
+}

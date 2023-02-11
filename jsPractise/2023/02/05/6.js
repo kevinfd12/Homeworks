@@ -8,3 +8,10 @@ console.log(mapObj([1, 2, 3], (a) => a * a));
 //   '2': 4,
 //   '3': 9
 // }
+
+function mapObj(arr, fn) {
+  return arr.reduce((acc, cur) => {
+    acc[cur] = fn(cur);
+    return acc;
+  }, {});
+}
