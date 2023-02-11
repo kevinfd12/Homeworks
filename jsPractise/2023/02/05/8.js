@@ -6,11 +6,5 @@ console.log(product([100, -200, 3])); // output: -60000
 console.log(product([1, 2, 'a', 3])); // output: 6
 
 function product(arr) {
-  return arr.reduce((acc, cur) => {
-    if (typeof cur === 'number') {
-      return acc * cur;
-    } else {
-      return acc;
-    }
-  }, 1);
+  return arr.reduce((acc, cur) => (typeof cur === 'number' ? acc * cur : acc), 1);
 }

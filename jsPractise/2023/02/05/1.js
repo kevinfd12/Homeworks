@@ -3,7 +3,7 @@
 // other words: result should be always as as array
 
 const castArray = (value) => {
-  return Array.isArray(value) ? [...value] : [value];
+  return Array.isArray(value) ? value : [value];
 };
 
 console.log(castArray('w3r')); // ['w3r']

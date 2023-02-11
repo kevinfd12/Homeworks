@@ -12,3 +12,6 @@ console.log(giveLongest(...['a', 'ab', 'abc'])); // output: 'abc'
 console.log(giveLongest(...['a', 'ab', 'abc'], 'abcd')); // output: 'abcd'
 console.log(giveLongest([1, 2, 3], [1, 2], [1, 2, 3, 4, 5])); // output: [ 1, 2, 3, 4, 5 ]
 console.log(giveLongest([1, 2, 3], 'foot')); // output: 'foot'
+
+// sort solution
+const giveLongest2 = (...input) => input.sort((a, b) => b.length - a.length)[0];
