@@ -25,5 +25,10 @@
 //   return result;
 // }
 
+const difference111 = (arr1, arr2) => {
+  const arr = [...arr1, ...arr2].flat(Infinity);
+  return arr.filter((num) => arr.indexOf(num) === arr.lastIndexOf(num));
+};
+
 console.log(difference111([1, 2, 3], [100, 2, 1, 10]));
 console.log(difference111([1, 2, 3, 4, 5], [1, [2], [3, [[4]]], [5, 6]]));

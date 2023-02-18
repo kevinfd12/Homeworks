@@ -2,7 +2,7 @@
 // Write a JavaScript program to get the median of an array of numbers
 
 function getMedian(arr) {
-  const sortedArr = arr.sort((a, b) => a - b);
+  const sortedArr = arr.sort();
   const mid = Math.floor(sortedArr.length / 2);
 
   if (sortedArr.length % 2 === 0) {

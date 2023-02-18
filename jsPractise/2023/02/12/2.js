@@ -19,6 +19,19 @@ const string_chop = (string, number = string.length) => {
   }, []);
 };
 
-console.log(string_chop('w3resource'));
-console.log(string_chop('w3resource', 2));
-console.log(string_chop('w3resource', 3));
+// alternative solution
+const string_chop2 = (string, number = string.length) => {
+  let copyString = string;
+  let result = [];
+
+  while (copyString) {
+    result.push(copyString.slice(0, number));
+    copyString = copyString.slice(number);
+  }
+
+  return result;
+};
+
+console.log(string_chop2('w3resource'));
+console.log(string_chop2('w3resource', 2));
+console.log(string_chop2('w3resource', 3));

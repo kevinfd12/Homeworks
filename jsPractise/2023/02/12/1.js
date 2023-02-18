@@ -11,9 +11,7 @@
 
 const text_truncate = (string, number, character = '...') => {
   let characterLen = character.length;
-  return string.length > number
-    ? `${string.slice(0, number - characterLen)}${character}`
-    : `${string}`;
+  return string.length > number ? `${string.slice(0, number - characterLen)}${character}` : string;
 };
 
 console.log(text_truncate('We are doing JS string exercises.'));

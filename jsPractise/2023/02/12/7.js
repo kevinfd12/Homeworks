@@ -9,5 +9,7 @@
 
 //Not sure at all
 
+const flatten64 = (arr, shallow = false) => arr.flat(shallow ? 1 : Infinity);
+
 console.log(flatten64([1, [2], [3, [[4]]], [5, 6]]));
 console.log(flatten64([1, [2], [3, [[4]]], [5, 6]], true));
