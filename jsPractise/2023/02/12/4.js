@@ -9,5 +9,12 @@
 // "12300000"
 // "12300000"
 
+const formatted_string = (string1, string2, direction) => {
+  const strLen = String(string2).length;
+  return direction === 'left'
+    ? `${string1.split('').slice(0, -strLen).join('')}${string2}`
+    : `${string2}${string1.split('').slice(0, -strLen).join('')}`;
+};
+
 console.log(formatted_string('0000', 123, 'left'));
 console.log(formatted_string('00000000', 123));

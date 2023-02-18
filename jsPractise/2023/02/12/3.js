@@ -8,5 +8,12 @@
 // Output :
 // 1
 
+const count195 = (string1, string2) => {
+  let count = (string1.match(new RegExp(string2, 'gi')) || []).length; //I wanted to use regular expression to match like this let count = (string1.match(/string2/g) || []).length;
+  //This did not work so instead I have to use this format and 'g' means search the whole string rather than just find the first occurrence.
+  // gi makes the regular expression case-insensitive
+  return count;
+};
+
 console.log(count195('The quick brown fox jumps over the lazy dog', 'the'));
 console.log(count195('The quick brown fox jumps over the lazy dog', 'fox'));

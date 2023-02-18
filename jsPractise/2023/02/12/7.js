@@ -7,5 +7,7 @@
 // console.log(flatten([1, [2], [3, [[4]]],[5,6]], true));
 // [1, 2, 3, [[4]], 5, 6]
 
+//Not sure at all
+
 console.log(flatten64([1, [2], [3, [[4]]], [5, 6]]));
 console.log(flatten64([1, [2], [3, [[4]]], [5, 6]], true));
