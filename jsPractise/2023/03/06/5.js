@@ -15,6 +15,10 @@ function truncate(str, numWords) {
 
   const truncatedWords = words.slice(0, numWords);
   return truncatedWords.join(' ');
+
+  // alternative solution:
+  // words.length = numWords;
+  // return words.join(' ');
 }
 
 console.log(truncate('The quick brown fox jumps over the lazy dog', 4));

@@ -9,19 +9,19 @@ const operationType = {
 };
 
 const currencyMath = (a, b, oper) => {
-  const centsA = Math.round(parseFloat(a.replace('$', '')) * 100); //they need to be converted from strings into floats.
-  const centsB = Math.round(parseFloat(b.replace('$', '')) * 100);
+  const centsA = parseFloat(a.replace(/[^0-9.-]+/g, '')); //they need to be converted from strings into floats.
+  const centsB = parseFloat(b.replace(/[^0-9.-]+/g, ''));
   let result = 0; // just declaring result
 
   switch (oper) {
     case operationType.ADD:
-      result = (centsA + centsB) / 100;
+      result = centsA + centsB;
       break;
     case operationType.SUB:
-      result = (centsA - centsB) / 100;
+      result = centsA - centsB;
       break;
     case operationType.MUL:
-      result = (centsA * centsB) / 10000;
+      result = centsA * centsB;
       break;
     case operationType.DIV:
       result = centsB !== 0 ? centsA / centsB : null;

@@ -7,7 +7,7 @@
 // "SUadeeinsttt"
 
 const alphabetize_string = (str) => {
-  return str.split('').sort().join('');
+  return [...str].sort().join('');
 };
 
 console.log(alphabetize_string('United States'));
