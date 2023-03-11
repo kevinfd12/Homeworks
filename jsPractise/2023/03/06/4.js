@@ -9,6 +9,10 @@
 // "js"
 // "js"
 
+function strip(str) {
+  return str.trim();
+}
+
 console.log(strip('js '));
 console.log(strip(' js'));
 console.log(strip(' js '));
